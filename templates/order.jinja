@@ -5,27 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bad Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Order Details</h1>
-    <table>
-    <tr>
-        <th>Customer Name</th>
-        <th>Order Date</th>
-        <th>Book Title</th>
-        <th>Author</th>
-        <th>Quantity</th>
-    </tr>
+    <div style="overflow-x:auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Order Date</th>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
 
-
-    <tr>
-        <td> {{ order.customer_name }}</td>
-        <td> {{ order.order_date }}</td>
-        <td> {{ order.book_title }}</td>
-        <td> {{ order.author }}</td>
-        <td> {{ order.quantity }}</td>
-    </tr>
-    </table>
+            <tbody>
+                <tr>
+                    <td> {{ order.customer_name }}</td>
+                    <td> {{ order.order_date }}</td>
+                    <td> {{ order.book_title }}</td>
+                    <td> {{ order.author }}</td>
+                    <td> {{ order.quantity }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
     
 </body>
