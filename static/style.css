@@ -8,11 +8,13 @@ body {
     background-color: #FF6969;
     color: #FF6969;
 }
+
 body h1 {
     font-size: 100px;
     color: #A6D0DD;
     text-align: center;
 }
+
 body h2 {
     font-size: 60px;
     color: #A6D0DD;
@@ -54,4 +56,3 @@ img {
     opacity: 0.75;
     border-radius: 75%;
 }
-

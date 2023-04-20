@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,11 @@
     <title>Big Bad Books</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <header class="blocking">
-    <h1>Big Bad Books</h1>
-    <h2> March Orders </h2>
+        <h1>Big Bad Books</h1>
+        <h2> March Orders </h2>
     </header>
     <div style="overflow-x:auto;">
         <table class="march">
@@ -23,22 +25,24 @@
                     <th>Quantity</th>
                 </tr>
             </thead>
-        
-        {% for order in orders %}
+
+            {% for order in orders %}
 
             <tbody>
                 <tr>
-                    <td> <a href="/orders/{{orders.index(order)}}">{{orders.index(order) + 1}}</a>{{ order.customer_name }}</td>
+                    <td> <a href="/orders/{{orders.index(order)}}">{{orders.index(order) + 1}}</a>{{ order.customer_name
+                        }}</td>
                     <td> {{ order.order_date }}</td>
                     <td> {{ order.book_title }}</td>
                     <td> {{ order.author }}</td>
                     <td> {{ order.quantity }}</td>
                 </tr>
             </tbody>
-        {% endfor %}
+            {% endfor %}
         </table>
     </div>
     <br>
     <img src="/static/images/dustin-tramel-vcXxSh0GHBc-unsplash.jpg" alt="cluttered bookshelves">
 </body>
+
 </html>
