@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Bad Books</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{# alternative href without using url_for ----> /static/css/main.css #}
 </head>
+
 <body>
+{# from solution ---> nav bar to return to home (/orders) page #}
+{# <nav>
+        <ul>
+            <li class="navLink"><a href="/orders">Home</a></li>
+        </ul>
+    </nav> #}
     <h1>Order Details</h1>
     <div style="overflow-x:auto;">
         <table>
